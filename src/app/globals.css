@@ -1,0 +1,35 @@
+.iconWrapper {
+    padding: .625rem;
+    border-radius: 7px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.iconWrapper:hover {
+    background: rgb(243 244 246);
+}
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.divide-y {
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-color: rgb(237, 237, 239);
+    border-style: solid;
+    padding: 12px;
+}
+
+.listItem {
+    border-radius: 7px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.listItem:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
