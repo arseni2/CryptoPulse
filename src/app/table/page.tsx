@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
-import {Button, Dropdown, Flex, Space, Table, TableColumnsType, TableProps} from "antd";
+import {Button, Dropdown, Space, Table, TableColumnsType, TableProps} from "antd";
 import SearchModal from "@/components/SearchModal";
 import {SearchOutlined} from "@ant-design/icons";
 import Header from "@/components/Header";
+
 interface DataType {
 	key: React.Key;
 	name: string;
@@ -113,8 +114,10 @@ const Page = () => {
 	const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter, extra) => {
 		console.log('params', pagination, filters, sorter, extra);
 	};
+
+	// @ts-ignore
 	return (
-		<Flex vertical gap={"large"}>
+		<div className={"flex flex-col gap-4"}>
 			<Header title={"Table"}>
 				<Dropdown menu={{
 					items: [
@@ -147,12 +150,13 @@ const Page = () => {
 
 			<Table
 				columns={columns}
+
 				dataSource={data}
 				onChange={onChange}
 				showSorterTooltip={{ target: 'sorter-icon' }}
 				pagination={false}
 			/>
-		</Flex>
+		</div>
 	);
 };
 
